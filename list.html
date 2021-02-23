@@ -1,0 +1,60 @@
+<html>
+  <head>
+   <style>
+       body{
+           background-image:url("img1.jpeg");
+	   background-repeat:no-repeat;
+background-size:cover;
+       }
+       form{
+           margin-top: 200;
+       }
+      </style>
+  </head>
+  <body><center>
+<br>
+<h1 style="color:white"> Linked List Simulation</h1>
+    <form action="">
+      <input type="text" name="" id="value" placeholder="Enter a number"/><br><br>
+      <input type="button" value="Add to linkedlist" onclick="add()" /><br><br>
+     <input type="button" value="Remove from linkedlist" onclick="remove()" />
+      <div id="show" style="color:white"></div>
+    </form>
+</center>
+    <script>
+        function addNull() {
+        const nullNode = document.createElement("p");
+        nullNode.id = "nullNode";
+        document.getElementById("show").appendChild(nullNode);
+      }
+  function clearField(value) {
+        value.value = '';
+    }
+    
+      const add = () => {
+        document.getElementById("show")
+          .removeChild(document.getElementById("nullNode"));
+        const node = document.createElement("p");
+        if (document.getElementById("value").value !== "") {
+          node.innerHTML =document.getElementById("value").value;
+          node.id = `value${document.getElementById("value").value}`;
+          document.getElementById("show").appendChild(node);
+        }
+clearField(value)
+        addNull();
+      };
+      const remove = () => {
+        const cont = document.getElementById("show");
+        show.removeChild(
+          document.getElementById(
+            `value${document.getElementById("value").value}`
+          )
+        );
+clearField(value)
+      };
+      
+      addNull()();
+      
+    </script>
+  </body>
+</html>
